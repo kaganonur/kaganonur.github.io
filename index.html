@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Kağan Onur</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-center">
+      <h1>KAĞAN<br>ONUR</h1>
+      <span class="line"></span>
+    </div>
+  </section>
+
+    <!-------------ABOUT----------->
+ <section id="about" class="about">
+  <h2 class="section-title">Ben Kimim</h2>
+  <p>
+     Selamlar, ben Kağan. 2001 Şişli doğumluyum. Liseyi Bakırköy İncirli'de bulunan Gürlek Nakipoğlu Anadolu Lisesi'nde bitirdikten sonra üniversite 
+      eğitimim için Kültür Üniversitesi Bilgisayar Mühendisliği bölümünü tercih ettim. Üniversite hazırlık eğitimini tamamlayıp birinci sınıfta çeşitli nedenlerle
+      yatay geçiş yapmaya karar verdim ve Yıldız Teknik Üniversitesi İstatistik bölümüne yatay geçiş yaptım. Şu an son sınıf öğrencisiyim. Yeni yerler
+      görmek, farklı deneyimler yaşamak ve farklı insanlarla tanışmak için elimden geldiğince çabalıyorum. Öte yandan küçüklüğümden bu yana yanımdan ayrılmayan 
+      oyun tutkum her artık bırakıyorum dediğimde yanımda beliriyor. Bilgisayar oyunları başta olmak üzere mobil ve konsol oyunlarına da ilgim var. En büyük 
+      keyiflerimden öteki ise kuşkusuz animeler. Ortaokul zamanlarından beri hayran olduğum bu animasyonlar hayatımda oldukça derin izler barındırıyor. Geçmiş
+      ve şimdiki ben hakkında yeterince konuştuğuma göre gelecek ben hakkında da biraz laf etmezsem olmaz. Gelecekteki ben neye benzeyecek ve nasıl biri  olacak hala emin olamıyorum.
+      O nedenle kendinizi 5 yıl sonra nerede görüyorsunuz tarzı soruları cevaplamam bir hayli zor. Yine de umut ediyorum ki hala hayallerinin peşinden koşuyor,
+      ayağına dolanan örümcek ağlarını yavaş da olsa kararlılıkla geçiyor ve çevresine ışık saçıyordur. İşte bu eğrisiyle doğrusuyla ben!
+  </p>
+
+  <div class="about-links">
+    <a href="https://www.linkedin.com/in/ka%C4%9Fan-onur-1700921b4/">LinkedIn</a>
+    <a href="https://www.instagram.com/kagannonur/">Instagram</a>
+    <a href="mailto:kaganonur08@gmail.com">Mail</a>
+  </div>
+</section>
+
+<!-------------------------YETENEKLER------------------>
+
+<section id="skills" class="skills">
+  <h2 class="section-title">Teknik Yetkinlikler</h2>
+  
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>İstatistik & Analiz</h3>
+      <p>Hipotez Testleri, Regresyon Analizi, Olasılık Teorisi.</p>
+      <div class="skill-tags">
+        <span>R</span>
+        <span>SPSS</span>
+        <span>Excel</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Veri Bilimi</h3>
+      <p>Veri manipülasyonu, görselleştirme ve modelleme.</p>
+      <div class="skill-tags">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Pandas</span>
+      </div>
+    </div>
+
+    <div class="skill-card">    
+        <h3>Veri İşaretleme</h3>
+      <p>Denetimli öğrenme modelleri için veri temizleme, sınıflandırma ve yüksek doğruluklu etiketleme süreçleri.</p>
+      <div class="skill-tags">
+        <span>Veri Yapılandırma</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Neler Yaptım</h2>
+    <div class="project-grid">
+      
+      <div class="project-card featured-project" onclick="openProject('invest')">
+        <div class="project-info">
+          <span class="project-category">Zaman Serisi & Finans</span>
+          <h3>Yatırım Araçları Performans Analizi</h3>
+          <p>Enflasyon karşısında altın, dolar ve faiz getirilerinin 20 yıllık reel analizi.</p>
+          <div class="project-tech-stack">
+            <span>Python</span> <span>ARIMA</span> <span>Finansal İstatistik</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured-project" onclick="openProject('customer')">
+        <div class="project-info">
+          <span class="project-category">Pazarlama Analitiği</span>
+          <h3>Müşteri Satın Alma Davranışları</h3>
+          <p>Lojistik Regresyon ve Ki-Kare testi ile satın alma kararı etkileyen faktörlerin analizi.</p>
+          <div class="project-tech-stack">
+            <span>Lojistik Regresyon</span> <span>Ki-Kare</span> <span>R/Python</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="prev-btn" onclick="changeImage(-1, event)">&#10094;</button>
+    <button class="next-btn" onclick="changeImage(1, event)">&#10095;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <div id="project-modal" class="project-modal" onclick="closeProjectModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+    
+    <div id="project-details">
+      </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<div id="project-modal" class="project-modal" onclick="closeProjectModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+    <div id="project-details">
+      </div>
+  </div>
+</div>
+
+
+
+  </section>
+
+  <!-- BLOG WRAPPER -->
+  <main id="blog" class="blog">
+
+   
+
+    <!-- ================= ALMANYA ================= -->
+  <div class="tab-content" id="germany">
+
+    <div class="city-block">
+
+
+        <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Dresden</h3>
+      <p>Gotik mimarisi ve büyüleyici yapılarıyla karşınıda Almanya Dresden.
+         Hofkirche (Dresden Katedrali), Kreuzkirche,  Frauenkirche (Meryem Ana Kilisesi) 
+         gibi kiliselerin yanı sıra Zwinger Sarayı, Semperoper (Semper Opera Binası), 
+         Dresden Kalesi (Residenzschloss) gibi ikonik yapılara ev sahipliği yapan bu şehir. 
+         Prag kadar harika üstüne üstlük çok daha gösterişli yapılarla sizi karşılamakta.
+         Şehri Altstadt (Eski Şehir) ve Neustadt (Yeni Şehir) olarak ikiye bölen Elbe nehri
+         manzarasında yeterince gezindikten dinleneceğiniz, Almanya’ya gelmişken alışveriş
+          yapmak istediğiniz bir yer varsa imdadınıza Altmarkt-Galerie koşuyor. Şehrin merkezine 
+          konuşlanan bu modern yapı çeşitli zincir markalar ve restoranlarla keyif sürebileceğiniz bir AVM </p>
+    </div>
+
+    <!-- KAPAK FOTOĞRAFI -->
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/almanya/dresden/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/almanya/dresden/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/7.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/8.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/9.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= AVUSTURYA ================= -->
+  <div class="tab-content" id="austria">
+
+    <div class="city-block">
+  <div class="city-header">
+    <h3>Hallstatt</h3>
+    <p>Eşsiz doğa manzaralarıyla bakmaya doyamayacağınız, 
+      insanı adeta etkisine alan bu nadide kasabada inanın 
+      beklediğinizden daha fazlasını bulacaksınız. Kartpostal 
+      manzaralarına konu olmuş Hallstatt gölü bir yana, alp 
+      dağları öbür yana uzanırken kendinizi hatırı sayılır bir 
+      yokuştan sonra süslenmiş mezarlıklar ve insan kemikleriyle
+       dolu bir şapelin içerisinde bulabilirsiniz. Bone House 
+       (Beinhaus) dağlar ile gölün arasına sıkışmış Hallstat’ın 
+       toprak azlığından doğan gömülecek yer ihtiyacını gidermek 
+       için  var olmuş bir yapı. Mezarlar belirli yıllardan sonra 
+       açılıp içerisindeki kemikler çıkartılıyor, temizleniyor ve 
+       vefat eden kişinin hatırlandığını göstermek adına ismi ve 
+       tarihleriyle boyanıyormuş. İçerideki en eski boyalı kafatası 
+       ise 1995 yılına ait. Bu kadar karanlık hikâyeden sonra biraz
+       da harikalar diyarı diyebileceğimiz Hallstat’ın bahsetmezsem
+       olmaz bir imkanına daha doğrusu lezzetine geçelim. Gulaş Çarbası!
+        Hallstatt’ta tanıştığım bu lezzet benim için ne yazık ki mercimek, 
+        domates, tarhana, tavuk suyu gibi çorbaları geçerek ilk sıraya yükseldi. 
+         Gönle söz geçmezse elden ne gelir diyerek bu yoğun lezzeti tekrardan kibarlıkla öneriyorum.</p>
+  </div>
+
+
+  <div class="city-cover" onclick="toggleGallery(this)">
+    <img src="assets/images/avusturya/hallstatt/city-cover.jpg">
+  </div> <div class="gallery">
+        <img src="assets/images/avusturya/hallstatt/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/5.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Viyana</h3>
+      <p>Viyana deyince sizin aklınıza ne geliyor bilemem; lakin benim aklıma güzel kahveleri, 
+        şık binaları ve eşsiz atmosferiyle sanata âşık bir şehir geliyor. Orta Avrupa’da 
+        görebileceğiniz en harikulade yapılara ev sahipliği yapan Viyana; Hofburg Sarayı,
+        St. Stephen’s Katedrali, Schönbrunn Sarayı, Avusturya Parlamento Binası ve Belvedere
+        Sarayı ile gözlerinizi, Viyana Devlet Operası ile de kulaklarınızın pasını silmek 
+        için sizleri bekliyor. Mozart’ın Evi’ni de görebileceğiniz şehir, aynı zamanda
+        Beethoven’ın evlerine ve Sigmund Freud’un evine de ev sahipliği yapıyor.</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/avusturya/viyana/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/avusturya/viyana/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/7.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/9.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/10.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/12.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= ÇEKYA ================= -->
+
+  <div class="tab-content" id="czechia">
+
+
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Prag</h3>
+      <p>Prag mimari yapısıyla büyüleyici bir şehir. Orta Çağ mimarisinin gözlerimizi boyadığı 
+        bu nadide şehrin sokaklarında dolaşıp sohbet etmek bile ayrı bir keyif. Çarpık kentleşmeye 
+        meydan okuyan Prag hangi sokağına giderseniz gidin sizi düzenli ve şaşalı binalarıyla karşılayacaktır.
+        St. Vitus katedrali, Astronomik Saat ve Charles Köprüsü gibi görülmeden geçilmemesi gereken eserlerin 
+        yanı sıra Nazım Hikmet’in eserlerini yazdığı  Slavia Café sizleri misafir etmek ve kahve eşliğinde dinlenip 
+        prag sokaklarına bir süreliğine veda etmeniz için beklemekte.</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/Prag/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/Prag/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/8.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/10.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/11.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Cesky-krumlov</h3>
+      <p>İnanılması güç surları, kale kulesi ve Vltava Nehri ile Český Krumlov’a hoş geldiniz.
+         Český Krumlov Kalesi ve Vltava Nehri ile hem doğal hem yapay kombinasyonlu bir savunma 
+         geliştiren şehre kale şehir desek yanlış olmaz. Manzaraya yukarıdan hâkim olmaya alıştığınız 
+         bu şehirde biraz yorulacağınız da aşikar. Buna değip değmeyeceği ise o harika manzarada vakit 
+         geçirdikten sonra sizin vermeniz gereken bir karar. 13. yy.dan kalma rengarenk desenleriyle
+         Český Krumlov Kale Kulesi şehre imzalarını atan yapılardan bir diğeri. Prag ve Karlovy Vary 
+         benzeri şirin binaları ve atmosferiyle Český Krumlov da ziyaret etmek isteyeceğiniz bir şehir.</p>
+    </div>
+
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/cesky-krumlov/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/cesky-krumlov/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/7.jpg" onclick="openLightbox(this)">
+    </div>
+
+    <div class="city-block">
+
+       <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Karlovy-Vary</h3>
+      <p>Mustafa Kemal Atatürk’ün de tedavi amacıyla ziyaret ettiği kaplıcalarıyla ünlü 
+        bu küçük şehirde çeşitli sağlık sorunlarının farklı derecelerdeki termal suyu 
+        tüketmek suretiyle gerçekleşen tedavi yöntemleri bulunmakta. Spa Cup adı verilen 
+        yassı ve sıcak suyun ağzınızı yakmasını önleme amacıyla çaydanlık vari ucu bulunan 
+        bardaklardan anı olarak satın alabilir ve termal suyu bu şekilde de tüketebilirsiniz.
+        Başka açılardan şehre bakmaya çalıştığımızda Grandhotel Pupp gözümüze çarpan ilklerden 
+        olacaktır muhakkak. Bu otel Johann Wolfgang von Goethe, Johann Sebastian Bach ve Richard 
+        Wagner gibi ünlü isimleri ağırlamış olmanın yanı sıra Casino Royale filminde de yer almanın
+        ağırlığını ve gururunu taşımaktadır. Güzel mimarisi, köprüleri ve termal suyuyla Çek Cumhuriyetine
+        geldiyseniz ziyaret etmenizi kibarlıkla öneririm</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/karlovy-vary/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/karlovy-vary/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/7.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= MACARİSTAN ================= -->
+ <div class="tab-content" id="hungary">
+
+  <div class="city-block">
+
+         <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Budapeşte</h3>
+      <p>Kahramanlık hikayelerini anlatan heykelleriyle 
+        görkemli Kahramanlar Meydanı, Buda ve Pest’i bağlayan
+        tarihi Zincir Köprü, Stephen Basilica’sı, Matthias 
+        Kilisesi ve her şeyi ayıran tek bir mavi çizgi, 
+        Tuna Nehri. İşte Budapeşte farklılıkların 
+        birlikteliğine güzel bir örnek. Kışın giderseniz
+        üzerinde kayak yapabileceğiniz Városliget Buz
+        Pisti ile Budapeşte aynı yeri yazın bir gölete
+        dönüştürüyor. 1873 yılında birleşen tepelik ve 
+        sakin Buda ile düz ve hareketli Pest günümüzde 
+        Budapeşte’yi oluşturmakta. Coğrafi olarak her
+        ne kadar bir olarak kabul ediyorsak da sevgilileri 
+        ayıran Tuna Nehri tüm görkemiyle Macaristan 
+        Parlamento Binası’nın ayaklarına serilmiş durumda.
+        Tuna Nehrinde dilerseniz akşam vakti tekne turu 
+        yaparak parlamento binasının ışıklandırmalarına
+        şahit olabilir isterseniz de gündüz gözüyle şehri
+        seyre dalabilirsiniz. Yeri gelmişken olur da 
+        Kahramanlar Meydanında toplanmış bir kalabalık
+        görürseniz resmi karşılama törenlerinin de  
+        burada yapıldığını aklınızda bulundurmanız 
+        dileğiyle.</p>
+    </div>
+
+    <div class="city-cover budapest-cover" onclick="toggleGallery(this)">
+      <img src="assets/images/macaristan/budapeste/city-cover.jpg">
+    </div>
+
+    <div class="gallery">
+      <img src="assets/images/macaristan/budapeste/1.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/2.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/3.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/4.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/6.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/7.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/8.jpg" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+</div>
+
+
+
+  <!-- ================= SLOVAKYA=============== -->
+  <div class="tab-content" id="slovakia">
+
+     <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Bratislava</h3>
+      <p>“İşten kaçan işçi”, “Yoldan geçen kadınlara bakan adam”,
+        “şehrin mizahi yüzü” hepsinin tek bir ortak yönü var desem aklınıza ne gelir? 
+        Eğer Bratislava’da iseniz işte Cumil Heykeli. Kendisine ne akdar yaklaşırsanız
+        yaklaşın yüzünden gülümsemesi düşmeyen bu heykel şehrin ikonik eserleri arasında 
+        fotoğraf çektirmeden geçmemeniz gereken bir durak. Bratislava Kalesi, Slovak Ulusal
+        Tiyatrosu, Blue Church gibi diğer ikonik eserlerin yanı sıra Eski Şehir (Old Town)’ın 
+        dar taş sokaklarında renkli binalar eşliğinde keyifli gezintiler yapabilirsiniz.
+        Bratislava’nın merkezi konumunda bulunan yön yıldızına da basıp geçmeden önce
+        bir bakmanızda fayda var. Burası şehrin coğrafi merkezi olmasa da tarihi 
+        merkezini sembolize ediyor olabilir ama şu kesin ki şehrin tam kalbinde yer alıyor.</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/Slovakia/Bratislava/city-cover.jpg">
+        
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/Slovakia/Bratislava/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/4.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+    <script src="js/main.js"></script>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <button class="prev-btn" onclick="changeImage(-1, event)">&#10094;</button>
+  <button class="next-btn" onclick="changeImage(1, event)">&#10095;</button>
+  
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+      <p>2026 © Kağan Onur</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ka%C4%9Fan-onur-1700921b4/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/kagannonur/" target="_blank">Instagram</a>
+        <a href="mailto:kaganonur08@gmail.com">Mail</a>
+      </div>
+    </div>
+  </footer>
+    
+
+  <button id="scrollToTop" class="scroll-top-btn" onclick="topFunction()">
+  <span class="arrow-up"></span>
+</button>
+
+</body>
+</html>
