@@ -1,0 +1,394 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Kağan Onur</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">Kağan Onur</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="index.html" class="lang-btn">TR</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <section id="hero" class="hero">
+    <div class="hero-center">
+      <h1>KAĞAN<br>ONUR</h1>
+      <span class="line"></span>
+    </div>
+  </section>
+ 
+    <section id="about" class="about">
+  <h2 class="section-title">Who Am I</h2>
+  <p>
+      Greetings, I'm Kağan. Born in Şişli in 2001. After finishing high school at Gürlek Nakipoğlu Anatolian High School in Bakırköy, I initially chose Computer Engineering at Kültür University. After completing the prep year, I decided to transfer for various reasons and moved to the Statistics department at Yıldız Technical University. I am currently a senior student. I strive as much as I can to see new places, experience different things, and meet new people. On the other hand, my passion for gaming, which has been with me since childhood, reappears every time I say "I'm giving it up." I have an interest in PC games as well as mobile and console games. Another one of my greatest joys is undoubtedly anime. These animations, which I've admired since middle school, hold a deep place in my life. Having talked enough about my past and present self, I must say a few words about my future self. I'm still not sure what my future self will look like or what kind of person he will be. That's why questions like "where do you see yourself in 5 years" are quite difficult for me to answer. Still, I hope he is still chasing his dreams, crossing the spider webs that entangle his feet with determination—even if slowly—and radiating light to his surroundings. This is me, with all my ups and downs!
+  </p>
+
+  <div class="about-links">
+    <a href="https://www.linkedin.com/in/ka%C4%9Fan-onur-1700921b4/">LinkedIn</a>
+    <a href="https://www.instagram.com/kagannonur/">Instagram</a>
+    <a href="mailto:kaganonur08@gmail.com">Mail</a>
+  </div>
+</section>
+ 
+<section id="skills" class="skills">
+  <h2 class="section-title">Technical Skills</h2>
+  
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>Statistics & Analysis</h3>
+      <p>Hypothesis Testing, Regression Analysis, Probability Theory.</p>
+      <div class="skill-tags">
+        <span>R</span>
+        <span>SPSS</span>
+        <span>Excel</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Data Science</h3>
+      <p>Data manipulation, visualization, and modeling.</p>
+      <div class="skill-tags">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Pandas</span>
+      </div>
+    </div>
+
+    <div class="skill-card">    
+        <h3>Data Annotation</h3>
+      <p>Data cleaning, classification, and high-accuracy labeling processes for supervised learning models.</p>
+      <div class="skill-tags">
+        <span>Data Structuring</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title">What I've Done</h2>
+    <div class="project-grid">
+      
+      <div class="project-card featured-project" onclick="openProject('invest')">
+        <div class="project-info">
+          <span class="project-category">Time Series & Finance</span>
+          <h3>Investment Instruments Performance Analysis</h3>
+          <p>A 20-year real analysis of gold, dollar, and interest returns against inflation.</p>
+          <div class="project-tech-stack">
+            <span>Python</span> <span>ARIMA</span> <span>Financial Statistics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured-project" onclick="openProject('customer')">
+        <div class="project-info">
+          <span class="project-category">Marketing Analytics</span>
+          <h3>Customer Purchasing Behaviors</h3>
+          <p>Analysis of factors affecting purchasing decisions using Logistic Regression and Chi-Square testing.</p>
+          <div class="project-tech-stack">
+            <span>Logistic Regression</span> <span>Chi-Square</span> <span>R/Python</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOG WRAPPER -->
+  <main id="blog" class="blog">
+
+    {% for post in site.posts %}
+  {% if post.lang == "en" %}
+   <div class="blog-content">
+  {{ post.content }}
+</div>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    </div>
+  {% endif %}
+{% endfor %}
+
+   
+
+    <!-- ================= ALMANYA ================= -->
+  <div class="tab-content" id="germany">
+
+    <div class="city-block">
+
+
+        <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Dresden</h3>
+        <p>Dresden, Germany, welcomes you with its Gothic architecture and fascinating structures. Home to iconic buildings like the Hofkirche (Dresden Cathedral), Kreuzkirche, and Frauenkirche (Church of Our Lady), as well as the Zwinger Palace, Semperoper (Semper Opera House), and Dresden Castle (Residenzschloss). This city greets you with structures as wonderful as Prague's, but arguably even more flamboyant. After wandering enough along the Elbe River, which divides the city into Altstadt (Old Town) and Neustadt (New Town), Altmarkt-Galerie comes to the rescue if you want a place to rest or do some shopping while in Germany. Located in the city center, this modern structure is a mall where you can enjoy various chain brands and restaurants.</p>
+
+    </div>
+
+    <!-- KAPAK FOTOĞRAFI -->
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/almanya/dresden/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/almanya/dresden/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/7.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/8.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/almanya/dresden/9.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= AVUSTURYA ================= -->
+  <div class="tab-content" id="austria">
+
+    <div class="city-block">
+  <div class="city-header">
+    <h3>Hallstatt</h3>
+         <p>In this rare town, which you won't be able to stop looking at with its unique natural views, believe me, you will find more than you expected. Aside from Lake Hallstatt, which has been the subject of postcard views, and the Alps stretching on the other side, you may find yourself in a chapel filled with decorated cemeteries and human bones after a considerable slope. The Bone House (Beinhaus) is a structure created to meet the need for burial space arising from the lack of land in Hallstatt, which is squeezed between the mountains and the lake. Graves are opened after certain years, and the bones inside are removed, cleaned, and painted with the deceased's name and dates to show they are remembered. The oldest painted skull inside dates back to 1995. After such a dark story, let's move on to a delight—or rather, a flavor—of Hallstatt, which we can call a wonderland: Goulash Soup! Unfortunately for me, this flavor I met in Hallstatt rose to first place, surpassing soups like lentil, tomato, tarhana, and chicken broth. Since the heart wants what it wants, I politely recommend this intense flavor again.</p>
+
+  </div>
+
+
+  <div class="city-cover" onclick="toggleGallery(this)">
+    <img src="assets/images/avusturya/hallstatt/city-cover.jpg">
+  </div> <div class="gallery">
+        <img src="assets/images/avusturya/hallstatt/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/hallstatt/5.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Viyana</h3>
+            <p>I don't know what comes to your mind when you think of Vienna, but for me, it's a city in love with art, with its beautiful coffees, elegant buildings, and unique atmosphere. Hosting the most magnificent structures you can see in Central Europe, Vienna awaits to feast your eyes with Hofburg Palace, St. Stephen’s Cathedral, Schönbrunn Palace, the Austrian Parliament Building, and Belvedere Palace, and to delight your ears with the Vienna State Opera. The city, where you can also see Mozart’s House, also hosts the houses where Beethoven stayed and Sigmund Freud’s home.</p>
+
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/avusturya/viyana/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/avusturya/viyana/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/7.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/9.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/10.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/avusturya/viyana/12.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= ÇEKYA ================= -->
+
+  <div class="tab-content" id="czechia">
+
+
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Prag</h3>
+            <p>Prague is a fascinating city with its architectural structure. Even wandering and chatting in the streets of this rare city, where Medieval architecture colors our eyes, is a distinct pleasure. Defying unplanned urbanization, Prague will greet you with its organized and grand buildings no matter which street you go to. In addition to must-see works like St. Vitus Cathedral, the Astronomical Clock, and Charles Bridge, Slavia Café, where Nazım Hikmet wrote his works, is waiting for you to rest with a coffee and bid a brief farewell to the streets of Prague.</p>
+
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/Prag/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/Prag/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/8.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/10.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/Prag/11.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+
+    <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Cesky-krumlov</h3>
+      <p>Welcome to Český Krumlov with its incredible walls, castle tower, and the Vltava River. It wouldn't be wrong to call it a "castle city," as it developed a combined natural and artificial defense with Český Krumlov Castle and the Vltava River. It's clear you'll get a bit tired in this city where you're used to dominating the view from above. Whether it's worth it is a decision you'll have to make after spending time with that wonderful view. The colorful Český Krumlov Castle Tower, dating back to the 13th century, is another structure that leaves its mark on the city. With its charming buildings and atmosphere similar to Prague and Karlovy Vary, Český Krumlov is a city you'll definitely want to visit.</p>
+    </div>
+
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/cesky-krumlov/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/cesky-krumlov/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/cesky-krumlov/7.jpg" onclick="openLightbox(this)">
+    </div>
+
+    <div class="city-block">
+
+       <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Karlovy-Vary</h3>
+      <p>In this small city, famous for its thermal springs that even Mustafa Kemal Atatürk visited for treatment, there are various treatment methods carried out by consuming thermal water of different degrees for various health issues. You can buy "Spa Cups"—teapot-like cups with a spout designed to prevent the hot water from burning your mouth—as a souvenir and consume the thermal water this way. Looking at the city from other perspectives, Grandhotel Pupp will surely be one of the first things to catch your eye. Besides hosting famous names like Johann Wolfgang von Goethe, Johann Sebastian Bach, and Richard Wagner, this hotel carries the weight and pride of being featured in the movie Casino Royale. If you ever visit the Czech Republic, I politely recommend visiting for its beautiful architecture, bridges, and thermal waters.</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/cekya/karlovy-vary/city-cover.jpg">
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/cekya/karlovy-vary/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/4.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/5.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/6.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/cekya/karlovy-vary/7.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= MACARİSTAN ================= -->
+ <div class="tab-content" id="hungary">
+
+  <div class="city-block">
+
+         <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Budapeşte</h3>
+            <p>The magnificent Heroes' Square with its statues telling stories of heroism, the historical Chain Bridge connecting Buda and Pest, St. Stephen's Basilica, Matthias Church, and a single blue line separating everything: the Danube River. Budapest is a beautiful example of the unity of differences. If you go in winter, Budapest turns the Városliget Ice Rink, where you can skate, into a pond in summer. Hilly and calm Buda and flat and lively Pest, which merged in 1873, form today's Budapest. Although we consider them geographically as one, the Danube River, which separates lovers, lies at the feet of the Hungarian Parliament Building in all its glory. If you wish, you can witness the lighting of the parliament building by taking a boat tour on the Danube at night, or you can watch the city in broad daylight. By the way, if you see a crowd gathered at Heroes' Square, keep in mind that official welcoming ceremonies are also held here.</p>
+
+
+    <div class="city-cover budapest-cover" onclick="toggleGallery(this)">
+      <img src="assets/images/macaristan/budapeste/city-cover.jpg">
+    </div>
+
+    <div class="gallery">
+      <img src="assets/images/macaristan/budapeste/1.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/2.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/3.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/4.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/6.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/7.jpg" onclick="openLightbox(this)">
+      <img src="assets/images/macaristan/budapeste/8.jpg" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+</div>
+
+
+
+  <!-- ================= SLOVAKYA=============== -->
+  <div class="tab-content" id="slovakia">
+
+     <div class="city-block">
+
+           <!-- ŞEHİR BAŞLIĞI (KAPAKTAN ÖNCE) -->
+    <div class="city-header">
+      <h3>Bratislava</h3>
+      <p>"The worker escaping work," "The man watching women passing by," "The humorous face of the city"—what comes to your mind if I say they all have one thing in common? If you are in Bratislava, it's the Cumil Statue. No matter how close you get, this statue, whose smile never fades, is an iconic stop where you shouldn't pass without taking a photo. In addition to other iconic landmarks like Bratislava Castle, the Slovak National Theatre, and the Blue Church, you can enjoy pleasant walks through the narrow stone streets of the Old Town, accompanied by colorful buildings. It's also worth taking a look at the orientation star located in the center of Bratislava before stepping over it. While this might not be the geographic center, it symbolizes the historical heart and is definitely located at the very core of the city.</p>
+    </div>
+
+      <div class="city-cover" onclick="toggleGallery(this)">
+        <img src="assets/images/Slovakia/Bratislava/city-cover.jpg">
+        
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/Slovakia/Bratislava/1.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/2.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/3.jpg" onclick="openLightbox(this)">
+        <img src="assets/images/Slovakia/Bratislava/4.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+    <script src="js/main.js"></script>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <button class="prev-btn" onclick="changeImage(-1, event)">&#10094;</button>
+  <button class="next-btn" onclick="changeImage(1, event)">&#10095;</button>
+  
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+  <main id="blog" class="blog">
+    <div class="city-header">
+      <h3>Dresden</h3>
+      <p>Dresden, Germany, welcomes you with its Gothic architecture and fascinating structures. Home to iconic buildings like the Hofkirche (Dresden Cathedral), Kreuzkirche, and Frauenkirche (Church of Our Lady), as well as the Zwinger Palace, Semperoper (Semper Opera House), and Dresden Castle (Residenzschloss). This city greets you with structures as wonderful as Prague's, but arguably even more flamboyant. After wandering enough along the Elbe River, which divides the city into Altstadt (Old Town) and Neustadt (New Town), Altmarkt-Galerie comes to the rescue if you want a place to rest or do some shopping while in Germany. Located in the city center, this modern structure is a mall where you can enjoy various chain brands and restaurants.</p>
+    </div>
+
+    <div class="city-header">
+      <h3>Hallstatt</h3>
+      <p>In this rare town, which you won't be able to stop looking at with its unique natural views, believe me, you will find more than you expected. Aside from Lake Hallstatt, which has been the subject of postcard views, and the Alps stretching on the other side, you may find yourself in a chapel filled with decorated cemeteries and human bones after a considerable slope. The Bone House (Beinhaus) is a structure created to meet the need for burial space arising from the lack of land in Hallstatt, which is squeezed between the mountains and the lake. Graves are opened after certain years, and the bones inside are removed, cleaned, and painted with the deceased's name and dates to show they are remembered. The oldest painted skull inside dates back to 1995. After such a dark story, let's move on to a delight—or rather, a flavor—of Hallstatt, which we can call a wonderland: Goulash Soup! Unfortunately for me, this flavor I met in Hallstatt rose to first place, surpassing soups like lentil, tomato, tarhana, and chicken broth. Since the heart wants what it wants, I politely recommend this intense flavor again.</p>
+    </div>
+
+    <div class="city-header">
+      <h3>Vienna</h3>
+      <p>I don't know what comes to your mind when you think of Vienna, but for me, it's a city in love with art, with its beautiful coffees, elegant buildings, and unique atmosphere. Hosting the most magnificent structures you can see in Central Europe, Vienna awaits to feast your eyes with Hofburg Palace, St. Stephen’s Cathedral, Schönbrunn Palace, the Austrian Parliament Building, and Belvedere Palace, and to delight your ears with the Vienna State Opera. The city, where you can also see Mozart’s House, also hosts the houses where Beethoven stayed and Sigmund Freud’s home.</p>
+    </div>
+
+    <div class="city-header">
+      <h3>Prague</h3>
+      <p>Prague is a fascinating city with its architectural structure. Even wandering and chatting in the streets of this rare city, where Medieval architecture colors our eyes, is a distinct pleasure. Defying unplanned urbanization, Prague will greet you with its organized and grand buildings no matter which street you go to. In addition to must-see works like St. Vitus Cathedral, the Astronomical Clock, and Charles Bridge, Slavia Café, where Nazım Hikmet wrote his works, is waiting for you to rest with a coffee and bid a brief farewell to the streets of Prague.</p>
+    </div>
+
+    <div class="city-header">
+      <h3>Budapest</h3>
+      <p>The magnificent Heroes' Square with its statues telling stories of heroism, the historical Chain Bridge connecting Buda and Pest, St. Stephen's Basilica, Matthias Church, and a single blue line separating everything: the Danube River. Budapest is a beautiful example of the unity of differences. If you go in winter, Budapest turns the Városliget Ice Rink, where you can skate, into a pond in summer. Hilly and calm Buda and flat and lively Pest, which merged in 1873, form today's Budapest. Although we consider them geographically as one, the Danube River, which separates lovers, lies at the feet of the Hungarian Parliament Building in all its glory. If you wish, you can witness the lighting of the parliament building by taking a boat tour on the Danube at night, or you can watch the city in broad daylight. By the way, if you see a crowd gathered at Heroes' Square, keep in mind that official welcoming ceremonies are also held here.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>2026 © Kağan Onur</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ka%C4%9Fan-onur-1700921b4/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/kagannonur/" target="_blank">Instagram</a>
+        <a href="mailto:kaganonur08@gmail.com">Mail</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

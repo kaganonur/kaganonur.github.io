@@ -182,3 +182,16 @@ function scrollFunction() {
 function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Blog içeriğindeki tüm resimleri bul
+  const blogImages = document.querySelectorAll('.blog-content img');
+  
+  blogImages.forEach(img => {
+    // Resimlere tıklama özelliği ekle
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {
+      openLightbox(this); // Mevcut fonksiyonunu kullanıyoruz
+    });
+  });
+});

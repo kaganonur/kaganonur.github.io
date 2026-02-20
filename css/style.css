@@ -978,3 +978,87 @@ section {
         transform: translateX(-50%) !important; /* Tam merkeze çek */
     }
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Hafif şeffaf siyah */
+  backdrop-filter: blur(10px); /* Arkayı bulanıklaştıran şık efekt */
+  z-index: 1000;
+  border-bottom: 1px solid #333; /* O milimetrik alt çizgi hissi */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.lang-btn {
+  border: 1px solid #555;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* S23 ve mobil cihazlar için uyum */
+@media (max-width: 600px) {
+  .nav-logo { font-size: 1rem; }
+  .nav-links { gap: 10px; }
+}
+
+.blog-post-card {
+  border-bottom: 1px solid #333; /* Meşhur milimetrik çizgimiz */
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.blog-post-card h3 a {
+  color: white;
+  text-decoration: none;
+}
+.post-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.blog-post-card img {
+  display: block; /* Resmi bir blok elemanı yapar */
+  margin: 15px auto; /* Üstten ve alttan 15px boşluk bırakır, yatayda ortalar */
+  max-width: 100%; /* S23 gibi mobil cihazlarda ekran dışına taşmaz */
+  height: auto;
+  border: 1px solid #333; /* Portfolyondaki o meşhur milimetrik çizgi stili */
+}
+
+.blog-content img:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+  transform: scale(1.01); /* Çok hafif bir büyüme efekti */
+}
