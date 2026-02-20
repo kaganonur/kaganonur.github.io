@@ -1,5 +1,2 @@
-title: Kağan Onur Portfolio
-baseurl: "" 
 url: "https://kaganonur.github.io"
-theme: jekyll-theme-minimal # Basit bir tema seçimi Jekyll'ı tetikler
-markdown: kramdown
+baseurl: "" # Burasının boş olduğundan emin ol
